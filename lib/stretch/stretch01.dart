@@ -256,8 +256,6 @@ class _stret01State extends State<stret01> {
                           FadeTransition(opacity: a, child: c),
                     ),
                   );
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => stret02()));
                 },
                 icon: Icon(
                   Icons.arrow_forward_ios,

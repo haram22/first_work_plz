@@ -563,8 +563,6 @@ class _stretch1_6State extends State<stretch1_6> {
                       FadeTransition(opacity: a, child: c),
                 ),
               );
-              // Navigator.push(
-              //     context, MaterialPageRoute(builder: (context) => stret05()));
             },
             icon: Stack(
               children: [

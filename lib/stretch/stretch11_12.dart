@@ -76,10 +76,6 @@ class _stretching12State extends State<stretching12> {
                             FadeTransition(opacity: a, child: c),
                       ),
                     );
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => stretch13home()));
                   })),
           backgroundColor: Colors.white,
           elevation: 0,
@@ -118,7 +114,7 @@ class _stretching12State extends State<stretching12> {
               children: [
                 Image.asset('assets/check1.png'),
                 Padding(
-                  padding: const EdgeInsets.only(top: 8.0, left: 13),
+                  padding: const EdgeInsets.only(top: 15.0, left: 13),
                   child: Image.asset('assets/stretching01.gif', width: 130),
                 ),
               ],
@@ -127,22 +123,54 @@ class _stretching12State extends State<stretching12> {
             padding: EdgeInsets.zero,
             iconSize: 170,
             onPressed: () {},
-            icon: Image.asset('assets/check2.png')),
+            icon: Stack(
+              children: [
+                Image.asset('assets/check2.png'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0, left: 15),
+                  child: Image.asset('assets/stretching02.gif', width: 120),
+                ),
+              ],
+            )),
         IconButton(
             padding: EdgeInsets.zero,
             iconSize: 170,
             onPressed: () {},
-            icon: Image.asset('assets/check3.png')),
+            icon: Stack(
+              children: [
+                Image.asset('assets/check3.png'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 18.0, left: 17),
+                  child: Image.asset('assets/stretching03.gif', width: 120),
+                ),
+              ],
+            )),
         IconButton(
             padding: EdgeInsets.zero,
             iconSize: 170,
             onPressed: () {},
-            icon: Image.asset('assets/check4.png')),
+            icon: Stack(
+              children: [
+                Image.asset('assets/check4.png'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 18.0, left: 17),
+                  child: Image.asset('assets/stretching04.gif', width: 110),
+                ),
+              ],
+            )),
         IconButton(
             padding: EdgeInsets.zero,
             iconSize: 170,
             onPressed: () {},
-            icon: Image.asset('assets/check5.png')),
+            icon: Stack(
+              children: [
+                Image.asset('assets/check5.png'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0, left: 13),
+                  child: Image.asset('assets/stretching05.gif', width: 130),
+                ),
+              ],
+            )),
       ]),
     );
   }

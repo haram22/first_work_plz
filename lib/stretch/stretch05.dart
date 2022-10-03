@@ -106,15 +106,9 @@ class _stret05State extends State<stret05> {
                                               transitionsBuilder:
                                                   (_, a, __, c) =>
                                                       FadeTransition(
-                                                          opacity: a, child: c),
+                                                          opacity: a, child: c)
                                             ),
-                                          );
-                                          // Navigator.push(
-                                          //     context,
-                                          //     MaterialPageRoute(
-                                          //         builder: (context) =>
-                                          //             stretch1_6()));
-                                        },
+                                          );  },
                                         style: ButtonStyle(
                                             backgroundColor:
                                                 MaterialStateProperty.all<Color>(
@@ -136,7 +130,6 @@ class _stret05State extends State<stret05> {
                                               style: button1(
                                                   size: 20,
                                                   color: Colors.white),
-                                              // style: smallTextStyle(),
                                             ))),
                                       ),
                                     ],
