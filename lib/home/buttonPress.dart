@@ -42,83 +42,57 @@ class _moreState extends State<more> {
   }
 }
 
-class sit extends StatefulWidget {
-  const sit({super.key});
+// class lie extends StatefulWidget {
+//   const lie({super.key});
 
-  @override
-  State<sit> createState() => _sitState();
-}
+//   @override
+//   State<lie> createState() => _lieState();
+// }
 
-class _sitState extends State<sit> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-          toolbarHeight: 38,
-          elevation: 0,
-          backgroundColor: Colors.white,
-          leading: Padding(
-              padding: const EdgeInsets.only(left: 13.0, top: 15),
-              child: backArrow())),
-      body: Padding(
-          padding: const EdgeInsets.only(bottom: 38.0),
-          child: SvgPicture.asset('assets/21.svg', fit: BoxFit.none)),
-    );
-  }
-}
+// class _lieState extends State<lie> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Colors.white,
+//       appBar: AppBar(
+//           toolbarHeight: 38,
+//           elevation: 0,
+//           backgroundColor: Colors.white,
+//           leading: Padding(
+//               padding: const EdgeInsets.only(left: 13.0, top: 15),
+//               child: backArrow())),
+//       body: Padding(
+//           padding: const EdgeInsets.only(bottom: 38.0),
+//           child: SvgPicture.asset('assets/22.svg', fit: BoxFit.none)),
+//     );
+//   }
+// }
 
-class lie extends StatefulWidget {
-  const lie({super.key});
+// class stand extends StatefulWidget {
+//   const stand({super.key});
 
-  @override
-  State<lie> createState() => _lieState();
-}
+//   @override
+//   State<stand> createState() => _standState();
+// }
 
-class _lieState extends State<lie> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-          toolbarHeight: 38,
-          elevation: 0,
-          backgroundColor: Colors.white,
-          leading: Padding(
-              padding: const EdgeInsets.only(left: 13.0, top: 15),
-              child: backArrow())),
-      body: Padding(
-          padding: const EdgeInsets.only(bottom: 38.0),
-          child: SvgPicture.asset('assets/22.svg', fit: BoxFit.none)),
-    );
-  }
-}
-
-class stand extends StatefulWidget {
-  const stand({super.key});
-
-  @override
-  State<stand> createState() => _standState();
-}
-
-class _standState extends State<stand> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-          toolbarHeight: 38,
-          elevation: 0,
-          backgroundColor: Colors.white,
-          leading: Padding(
-              padding: const EdgeInsets.only(left: 13.0, top: 15),
-              child: backArrow())),
-      body: Padding(
-          padding: const EdgeInsets.only(bottom: 38.0),
-          child: SvgPicture.asset('assets/23.svg', fit: BoxFit.none)),
-    );
-  }
-}
+// class _standState extends State<stand> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Colors.white,
+//       appBar: AppBar(
+//           toolbarHeight: 38,
+//           elevation: 0,
+//           backgroundColor: Colors.white,
+//           leading: Padding(
+//               padding: const EdgeInsets.only(left: 13.0, top: 15),
+//               child: backArrow())),
+//       body: Padding(
+//           padding: const EdgeInsets.only(bottom: 38.0),
+//           child: SvgPicture.asset('assets/23.svg', fit: BoxFit.none)),
+//     );
+//   }
+// }
 
 class noti extends StatefulWidget {
   const noti({super.key});

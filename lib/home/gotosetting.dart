@@ -7,6 +7,7 @@ import '../theme/text_style.dart';
 import '../tutorial/profile.dart';
 import 'buttonPress.dart';
 import '../report/report.dart';
+import 'video.dart';
 
 class homesetting extends StatefulWidget {
   const homesetting({super.key});
@@ -15,7 +16,7 @@ class homesetting extends StatefulWidget {
 }
 
 class _homesettingState extends State<homesetting> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 3;
   late List<bool> ispress;
   bool ispress1 = true;
   bool ispress2 = true;
@@ -114,8 +115,14 @@ class _home1State extends State<home1> {
               child: IconButton(
                   icon: SvgPicture.asset('assets/notification.svg'),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => noti()));
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => noti(),
+                          transitionDuration: Duration(seconds: 0),
+                          transitionsBuilder: (_, a, __, c) =>
+                              FadeTransition(opacity: a, child: c)),
+                    );
                   }))
         ],
       ),
@@ -168,8 +175,14 @@ class _home1State extends State<home1> {
                   padding: const EdgeInsets.only(top: 10),
                   child: IconButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => home2()));
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home2(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
                       },
                       iconSize: 265,
                       icon: Image.asset('assets/home1_circle.png',
@@ -188,8 +201,14 @@ class _home1State extends State<home1> {
               TextButton(
                   style: TextButton.styleFrom(padding: EdgeInsets.zero),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => more()));
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => more(),
+                          transitionDuration: Duration(seconds: 0),
+                          transitionsBuilder: (_, a, __, c) =>
+                              FadeTransition(opacity: a, child: c)),
+                    );
                   },
                   child: Image.asset('assets/button_more.png', width: 78)),
             ],
@@ -201,8 +220,14 @@ class _home1State extends State<home1> {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => sit()));
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home_sit(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
                       },
                       icon: Image.asset('assets/top1.png'),
                       iconSize: 110),
@@ -214,8 +239,14 @@ class _home1State extends State<home1> {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => lie()));
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home_lie(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
                       },
                       icon: Image.asset('assets/top2.png'),
                       iconSize: 110),
@@ -227,8 +258,14 @@ class _home1State extends State<home1> {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => stand()));
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home_stand(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
                       },
                       icon: Image.asset('assets/top3.png'),
                       iconSize: 110),

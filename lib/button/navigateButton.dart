@@ -30,7 +30,13 @@ class nextButton extends StatelessWidget {
           onPressed: () {
             ispush
                 ? Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => navigator))
+                    context,
+                    PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => navigator,
+                        transitionDuration: Duration(seconds: 0),
+                        transitionsBuilder: (_, a, __, c) =>
+                            FadeTransition(opacity: a, child: c)),
+                  )
                 : Navigator.pop(context);
           },
           child:

@@ -190,8 +190,14 @@ class _home22State extends State<home22> {
                   padding: const EdgeInsets.only(top: 10),
                   child: IconButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => home8()));
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home8(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
                       },
                       iconSize: 265,
                       icon: Image.asset('assets/home1_circle.png',
@@ -211,8 +217,14 @@ class _home22State extends State<home22> {
               TextButton(
                   style: TextButton.styleFrom(padding: EdgeInsets.zero),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => more()));
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => more(),
+                          transitionDuration: Duration(seconds: 0),
+                          transitionsBuilder: (_, a, __, c) =>
+                              FadeTransition(opacity: a, child: c)),
+                    );
                   },
                   child: Image.asset('assets/button_more.png', width: 78)),
             ],
@@ -225,9 +237,13 @@ class _home22State extends State<home22> {
                   IconButton(
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => home_sit()));
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home_sit(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
                       },
                       icon: Image.asset('assets/top1.png'),
                       iconSize: 110),
@@ -240,9 +256,13 @@ class _home22State extends State<home22> {
                   IconButton(
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => home_lie()));
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home_lie(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
                       },
                       icon: Image.asset('assets/top2.png'),
                       iconSize: 110),
@@ -255,9 +275,13 @@ class _home22State extends State<home22> {
                   IconButton(
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => home_stand()));
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home_stand(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
                       },
                       icon: Image.asset('assets/top3.png'),
                       iconSize: 110),

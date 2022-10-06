@@ -1,22 +1,21 @@
-import 'package:my_work_plz/home/buttonPress.dart';
-import 'package:my_work_plz/theme/text_style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import '../setting/setting1_8.dart';
 import '../stretch/stretch1.dart';
 import '../theme/color.dart';
+import '../theme/text_style.dart';
 import '../tutorial/profile.dart';
-import '../video/video.dart';
+import 'buttonPress.dart';
 import '../report/report.dart';
+import 'video.dart';
 
-class homeback2 extends StatefulWidget {
-  const homeback2({super.key});
-  // final int indexx;
+class homestret extends StatefulWidget {
+  const homestret({super.key});
   @override
-  State<homeback2> createState() => _homeback2State();
+  State<homestret> createState() => _homestretState();
 }
 
-class _homeback2State extends State<homeback2> {
+class _homestretState extends State<homestret> {
   int _selectedIndex = 2;
   late List<bool> ispress;
   bool ispress1 = true;
@@ -28,7 +27,7 @@ class _homeback2State extends State<homeback2> {
     home1(),
     report(),
     stretch1(),
-    setting1(),
+    setting1()
   ];
   @override
   Widget build(BuildContext context) {
@@ -36,65 +35,53 @@ class _homeback2State extends State<homeback2> {
       backgroundColor: Colors.white,
       body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.black, width: 0.2),
-        ),
+        decoration:
+            BoxDecoration(border: Border.all(color: Colors.black, width: 0.2)),
         child: BottomNavigationBar(
-          backgroundColor: Colors.white,
-          type: BottomNavigationBarType.fixed,
-          unselectedItemColor: Colors.grey[400],
-          elevation: 5,
-          currentIndex: _selectedIndex,
-          selectedFontSize: 12,
-          unselectedFontSize: 12,
-          onTap: (int index) {
-            setState(() {
-              _selectedIndex = index;
-            });
-          },
-          iconSize: 28,
-          // ignore: prefer_const_literals_to_create_immutables
-          items: [
-            const BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 3.0, top: 10),
-                child: ImageIcon(AssetImage('assets/un_home.png')),
-              ),
-              label: '홈',
-            ),
-            const BottomNavigationBarItem(
-              icon: SizedBox(
-                width: 30,
-                child: Padding(
-                    padding: EdgeInsets.only(bottom: 3.0, top: 10),
-                    child: ImageIcon(AssetImage('assets/un_report.png'))),
-              ),
-              label: '리포트',
-            ),
-            const BottomNavigationBarItem(
-              icon: SizedBox(
-                width: 40,
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 3.0, top: 10),
-                  child: ImageIcon(
-                    AssetImage('assets/un_stretch.png'),
+            backgroundColor: Colors.white,
+            type: BottomNavigationBarType.fixed,
+            unselectedItemColor: Colors.grey[400],
+            elevation: 5,
+            currentIndex: _selectedIndex,
+            selectedFontSize: 12,
+            unselectedFontSize: 12,
+            onTap: (int index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
+            iconSize: 28,
+            // ignore: prefer_const_literals_to_create_immutables
+            items: [
+              const BottomNavigationBarItem(
+                  icon: Padding(
+                      padding: EdgeInsets.only(bottom: 3.0, top: 10),
+                      child: ImageIcon(AssetImage('assets/un_home.png'))),
+                  label: '홈'),
+              const BottomNavigationBarItem(
+                  icon: SizedBox(
+                      width: 30,
+                      child: Padding(
+                          padding: EdgeInsets.only(bottom: 3.0, top: 10),
+                          child:
+                              ImageIcon(AssetImage('assets/un_report.png')))),
+                  label: '리포트'),
+              const BottomNavigationBarItem(
+                  icon: SizedBox(
+                    width: 40,
+                    child: Padding(
+                        padding: EdgeInsets.only(bottom: 3.0, top: 10),
+                        child: ImageIcon(AssetImage('assets/un_stretch.png'))),
                   ),
-                ),
-              ),
-              label: '스트레칭',
-            ),
-            const BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.only(bottom: 3.0, top: 10),
-                child: ImageIcon(
-                  AssetImage('assets/un_setting.png'),
-                ),
-              ),
-              label: '설정',
-            ),
-          ],
-          selectedItemColor: Main,
-        ),
+                  label: '스트레칭'),
+              const BottomNavigationBarItem(
+                  icon: Padding(
+                    padding: EdgeInsets.only(bottom: 3.0, top: 10),
+                    child: ImageIcon(AssetImage('assets/un_setting.png')),
+                  ),
+                  label: '설정'),
+            ],
+            selectedItemColor: Main),
       ),
     );
   }
@@ -120,19 +107,23 @@ class _home1State extends State<home1> {
         elevation: 0,
         leadingWidth: 115,
         leading: Padding(
-          padding: const EdgeInsets.only(left: 37.0),
-          child: SvgPicture.asset('assets/name_logo.svg'),
-        ),
+            padding: const EdgeInsets.only(left: 37.0),
+            child: SvgPicture.asset('assets/name_logo.svg')),
         actions: [
           Padding(
               padding: const EdgeInsets.only(right: 30.0),
               child: IconButton(
-                icon: SvgPicture.asset('assets/notification.svg'),
-                onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => noti()));
-                },
-              ))
+                  icon: SvgPicture.asset('assets/notification.svg'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => noti(),
+                          transitionDuration: Duration(seconds: 0),
+                          transitionsBuilder: (_, a, __, c) =>
+                              FadeTransition(opacity: a, child: c)),
+                    );
+                  }))
         ],
       ),
       backgroundColor: Colors.white,
@@ -146,10 +137,8 @@ class _home1State extends State<home1> {
                   Image.asset('assets/d_60.png'),
                   Padding(
                     padding: const EdgeInsets.only(top: 18.0, left: 30),
-                    child: Text(
-                      "${user().input}님, 다음 측정일까지",
-                      style: body1(color: Colors.white, size: 12),
-                    ),
+                    child: Text("${user().input}님, 다음 측정일까지",
+                        style: body1(color: Colors.white, size: 12)),
                   )
                 ],
               ),
@@ -157,10 +146,8 @@ class _home1State extends State<home1> {
           ),
           SizedBox(height: 18),
           Center(
-            child: Text(
-              "${user().input}님! 자세를 위해 열심히 하고 있나요?",
-              style: subtitle1(size: 18, color: text),
-            ),
+            child: Text("${user().input}님! 자세를 위해 열심히 하고 있나요?",
+                style: subtitle1(size: 18, color: text)),
           ),
           Stack(
             children: [
@@ -183,15 +170,33 @@ class _home1State extends State<home1> {
                       foregroundImage: AssetImage('assets/01.gif')),
                 ),
               ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => home2(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
+                        );
+                      },
+                      iconSize: 265,
+                      icon: Image.asset('assets/home1_circle.png',
+                          color: Colors.transparent)),
+                ),
+              ),
             ],
           ),
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 36.0),
-                child: Text("주의가 필요한 자세 TOP3",
-                    style: title2(size: 19, color: text)),
-              ),
+                  padding: const EdgeInsets.only(left: 36.0),
+                  child: Text("주의가 필요한 자세 TOP3",
+                      style: title2(size: 19, color: text))),
               SizedBox(width: 77),
               TextButton(
                   style: TextButton.styleFrom(padding: EdgeInsets.zero),
@@ -199,11 +204,10 @@ class _home1State extends State<home1> {
                     Navigator.push(
                       context,
                       PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => more(),
-                        transitionDuration: Duration(seconds: 0),
-                        transitionsBuilder: (_, a, __, c) =>
-                            FadeTransition(opacity: a, child: c),
-                      ),
+                          pageBuilder: (_, __, ___) => more(),
+                          transitionDuration: Duration(seconds: 0),
+                          transitionsBuilder: (_, a, __, c) =>
+                              FadeTransition(opacity: a, child: c)),
                     );
                   },
                   child: Image.asset('assets/button_more.png', width: 78)),
@@ -219,11 +223,10 @@ class _home1State extends State<home1> {
                         Navigator.push(
                           context,
                           PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => videohome4(),
-                            transitionDuration: Duration(seconds: 0),
-                            transitionsBuilder: (_, a, __, c) =>
-                                FadeTransition(opacity: a, child: c),
-                          ),
+                              pageBuilder: (_, __, ___) => home_sit(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
                         );
                       },
                       icon: Image.asset('assets/top1.png'),
@@ -239,11 +242,10 @@ class _home1State extends State<home1> {
                         Navigator.push(
                           context,
                           PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => lie(),
-                            transitionDuration: Duration(seconds: 0),
-                            transitionsBuilder: (_, a, __, c) =>
-                                FadeTransition(opacity: a, child: c),
-                          ),
+                              pageBuilder: (_, __, ___) => home_lie(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
                         );
                       },
                       icon: Image.asset('assets/top2.png'),
@@ -259,11 +261,10 @@ class _home1State extends State<home1> {
                         Navigator.push(
                           context,
                           PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => stand(),
-                            transitionDuration: Duration(seconds: 0),
-                            transitionsBuilder: (_, a, __, c) =>
-                                FadeTransition(opacity: a, child: c),
-                          ),
+                              pageBuilder: (_, __, ___) => home_stand(),
+                              transitionDuration: Duration(seconds: 0),
+                              transitionsBuilder: (_, a, __, c) =>
+                                  FadeTransition(opacity: a, child: c)),
                         );
                       },
                       icon: Image.asset('assets/top3.png'),

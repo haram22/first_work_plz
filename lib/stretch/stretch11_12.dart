@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_work_plz/stretch/stretch01.dart';
 import '../button/navigateButton.dart';
+import '../home/gotostret.dart';
 import '../theme/color.dart';
 import '../theme/text_style.dart';
 import 'stretch13.dart';
@@ -70,7 +71,7 @@ class _stretching12State extends State<stretching12> {
                     Navigator.push(
                       context,
                       PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => stretch13home(),
+                        pageBuilder: (_, __, ___) => homestret(),
                         transitionDuration: Duration(seconds: 0),
                         transitionsBuilder: (_, a, __, c) =>
                             FadeTransition(opacity: a, child: c),
@@ -166,9 +167,8 @@ class _stretching12State extends State<stretching12> {
               children: [
                 Image.asset('assets/check5.png'),
                 Padding(
-                  padding: const EdgeInsets.only(top: 15.0, left: 13),
-                  child: Image.asset('assets/stretching05.gif', width: 130),
-                ),
+                    padding: const EdgeInsets.only(top: 15.0, left: 13),
+                    child: Image.asset('assets/stretching05.gif', width: 130)),
               ],
             )),
       ]),

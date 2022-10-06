@@ -219,7 +219,7 @@ class _stret03State extends State<stret03> {
                         child: FloatingActionButton.extended(
                           backgroundColor: _isPause ? text : Main,
                           onPressed: () {
-                           setState(() {
+                            setState(() {
                               if (value == 0) {
                                 _isPause = false;
                                 _controller.pause();
@@ -270,8 +270,6 @@ class _stret03State extends State<stret03> {
                           FadeTransition(opacity: a, child: c),
                     ),
                   );
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => stret04()));
                 },
                 icon: Icon(
                   Icons.arrow_forward_ios,

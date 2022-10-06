@@ -4,6 +4,7 @@ import 'package:my_work_plz/theme/text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../setting/setting_timer.dart';
 import '../theme/color.dart';
 
 class num extends ChangeNotifier {
@@ -50,7 +51,7 @@ class _RawPickerTestState extends State<RawPickerTest> {
 
   Widget _buildhour(BuildContext context, int i, int _length, Key? key) {
     return Provider(
-      create: (context) => setting3(),
+      create: (context) => setting_first(),
       child: Form(
         // key: _formKey,
         child: CupertinoPicker.builder(
@@ -240,7 +241,7 @@ class _RawPState extends State<RawP> {
 
   Widget _buildhour(BuildContext context, int i, int _length, Key? key) {
     return Provider(
-      create: (context) => setting3(),
+      create: (context) => setting_first(),
       child: Form(
         // key: _formKey,
         child: CupertinoPicker.builder(

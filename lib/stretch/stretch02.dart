@@ -39,8 +39,6 @@ class _stret02State extends State<stret02> {
                               FadeTransition(opacity: a, child: c),
                         ),
                       )
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => stretch1_6()))
                     : showDialog(
                         context: context,
                         builder: (BuildContext content) {
