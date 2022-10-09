@@ -108,8 +108,8 @@ class loginPageState extends State<loginPage> {
                                     FadeTransition(opacity: a, child: c)),
                           );
                         },
-                  child:
-                      const Text('로그인', style: TextStyle(color: Colors.white)),
+                  child: const Text('로그인',
+                      style: TextStyle(color: Colors.white, fontSize: 20)),
                 ),
               ),
             ),

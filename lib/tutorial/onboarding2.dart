@@ -26,9 +26,7 @@ class _iphoneState extends State<iphone> {
             borderRadius: BorderRadius.circular(15),
           ),
           color: Color(0xff595959),
-          child:
-              //Text("sd")
-              ListTile(
+          child: ListTile(
             onTap: () {
               Navigator.push(
                 context,
@@ -61,23 +59,16 @@ class _page13State extends State<page13> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SvgPicture.asset('assets/13.svg'),
+        Image.asset('assets/157.png'),
         Padding(
-          padding: const EdgeInsets.only(bottom: 705),
-          child: Center(
-            child: Card(
-              elevation: 0,
-              child: Text("${user().input}님 수고하셨어요!",
-                  style: title1(color: text, size: 26)),
-            ),
-          ),
-        ),
-        Padding(
-            padding: const EdgeInsets.only(top: 800, left: 154),
-            child: nextButton(
-                buttonText: '확인',
+            padding: const EdgeInsets.only(top: 799, left: 146),
+            child: nextButtonTrans(
+                buttonText: '',
                 navigator: page14(),
-                buttonColor: Main,
+                buttonColor: Colors.transparent,
+                heights: 45,
+                widths: 123,
+                radi: 50,
                 ispush: true)),
       ],
     );

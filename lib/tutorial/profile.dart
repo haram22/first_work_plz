@@ -1,3 +1,4 @@
+import 'package:my_work_plz/button/navigateButton.dart';
 import 'package:my_work_plz/tutorial/onboarding.dart';
 import 'package:my_work_plz/tutorial/onboarding2.dart';
 import 'package:my_work_plz/theme/color.dart';
@@ -224,7 +225,7 @@ class _nextProfileState extends State<nextProfile> {
                 Navigator.push(
                   context,
                   PageRouteBuilder(
-                      pageBuilder: (_, __, ___) => checkProduct(),
+                      pageBuilder: (_, __, ___) => page130(),
                       transitionDuration: Duration(seconds: 0),
                       transitionsBuilder: (_, a, __, c) =>
                           FadeTransition(opacity: a, child: c)),
@@ -240,10 +241,60 @@ class _nextProfileState extends State<nextProfile> {
         child: Padding(
             padding: const EdgeInsets.only(bottom: 438.0),
             child: DefaultTextStyle(
-              style: body5(size: 14, color: Colors.white),
+              style: text5(size: 13, color: Colors.white),
               child: Text('정확한 서비스 제공을 위해 패치 센서를 통한 자세 측정이 필요합니다.'),
+            )),
+      ),
+      Center(
+        child: Padding(
+            padding: const EdgeInsets.only(bottom: 402.0),
+            child: DefaultTextStyle(
+              style: text5(size: 13, color: Colors.white),
+              child: Text('측정 전에는 스트레칭, 통증기록과 같은 기본 기능만 이용 가능합니다'),
             )),
       )
     ]);
+  }
+}
+
+class page130 extends StatefulWidget {
+  const page130({super.key});
+
+  @override
+  State<page130> createState() => _page130State();
+}
+
+class _page130State extends State<page130> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/130.png'),
+          Padding(
+            padding: const EdgeInsets.only(top: 795.0, left: 250),
+            child: nextButtonTrans(
+                buttonText: '',
+                navigator: checkProduct(),
+                buttonColor: Colors.transparent,
+                heights: 50,
+                widths: 125,
+                radi: 50,
+                ispush: true),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 795.0, left: 40),
+            child: nextButtonTrans(
+                buttonText: '',
+                navigator: checkProduct(),
+                buttonColor: Colors.transparent,
+                heights: 50,
+                widths: 125,
+                radi: 50,
+                ispush: false),
+          )
+        ],
+      ),
+    );
   }
 }

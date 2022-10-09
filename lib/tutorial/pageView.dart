@@ -56,23 +56,30 @@ class _page14State extends State<page14> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset('assets/14_test.png'),
+        // Image.asset('assets/14_test.png'),
+        Image.asset('assets/159.png'),
         Row(
           children: [
             Padding(
-                padding: const EdgeInsets.only(top: 800, left: 49),
-                child: nextButton(
-                    buttonText: '뒤로가기',
+                padding: const EdgeInsets.only(top: 799, left: 45),
+                child: nextButtonTrans(
+                    buttonText: '',
                     navigator: navi(),
-                    buttonColor: Gray1,
+                    buttonColor: Colors.transparent,
+                    heights: 48,
+                    widths: 126,
+                    radi: 50,
                     ispush: false)),
             Spacer(),
             Padding(
-                padding: const EdgeInsets.only(top: 800, right: 49),
-                child: nextButton(
-                    buttonText: '확인',
+                padding: const EdgeInsets.only(top: 799, right: 44),
+                child: nextButtonTrans(
+                    buttonText: '',
                     navigator: page16(),
-                    buttonColor: Main,
+                    buttonColor: Colors.transparent,
+                    heights: 48,
+                    widths: 126,
+                    radi: 50,
                     ispush: true)),
           ],
         ),
