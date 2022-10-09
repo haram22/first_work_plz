@@ -7,6 +7,7 @@ import '../theme/text_style.dart';
 import '../tutorial/profile.dart';
 import 'buttonPress.dart';
 import '../report/report.dart';
+import 'home09.dart';
 import 'video.dart';
 
 class homestret extends StatefulWidget {
@@ -24,7 +25,7 @@ class _homestretState extends State<homestret> {
   bool ispress4 = true;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    home1(),
+    home33(),
     report(),
     stretch1(),
     setting1()

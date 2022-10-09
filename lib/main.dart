@@ -19,7 +19,6 @@ import 'tutorial/profile.dart';
 import 'tutorial/onboarding.dart';
 import 'tutorial/time.dart';
 import 'home/home.dart';
-import 'video/video.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,28 +30,11 @@ class MyApp extends StatelessWidget {
         home: AnimatedSplashScreen(
           duration: 3000,
           splashIconSize: 200,
-          nextScreen: profile(),
+          nextScreen: loginPage(),
           backgroundColor: Main,
           splash: 'assets/splash_logo.png',
           splashTransition: SplashTransition.fadeTransition,
           pageTransitionType: PageTransitionType.fade,
         ));
-  }
-}
-
-//stretch1
-class pageviewt extends StatefulWidget {
-  const pageviewt({super.key});
-
-  @override
-  State<pageviewt> createState() => _pageviewtState();
-}
-
-class _pageviewtState extends State<pageviewt> {
-  @override
-  Widget build(BuildContext context) {
-    return PageView(
-      children: [home(), home3(), home9()],
-    );
   }
 }

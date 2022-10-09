@@ -7,6 +7,7 @@ import '../theme/text_style.dart';
 import '../tutorial/profile.dart';
 import 'buttonPress.dart';
 import '../report/report.dart';
+import 'home09.dart';
 import 'video.dart';
 
 bool is1 = false;
@@ -190,18 +191,14 @@ class _home22State extends State<home22> {
                   padding: const EdgeInsets.only(top: 10),
                   child: IconButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                              pageBuilder: (_, __, ___) => home8(),
-                              transitionDuration: Duration(seconds: 0),
-                              transitionsBuilder: (_, a, __, c) =>
-                                  FadeTransition(opacity: a, child: c)),
-                        );
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => home9()));
                       },
                       iconSize: 265,
-                      icon: Image.asset('assets/home1_circle.png',
-                          color: Colors.transparent)),
+                      icon: Image.asset(
+                        'assets/home1_circle.png',
+                        color: Colors.transparent,
+                      )),
                 ),
               ),
             ],

@@ -6,48 +6,10 @@ import '../stretch/stretch1.dart';
 import '../theme/color.dart';
 import '../theme/text_style.dart';
 import '../tutorial/profile.dart';
-import '../video/video.dart';
 import 'buttonPress.dart';
 import 'home.dart';
 import '../report/report.dart';
 import 'video.dart';
-
-class home10 extends StatefulWidget {
-  const home10({super.key});
-
-  @override
-  State<home10> createState() => _home10State();
-}
-
-class _home10State extends State<home10> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          leading: Padding(
-            padding: const EdgeInsets.only(left: 18.0),
-            child: backArrow(),
-          )),
-      body: ListView(
-        children: [
-          Stack(children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 18.0),
-              child: Image.asset('assets/home10.png'),
-            ),
-          ])
-        ],
-      ),
-    );
-  }
-}
-
-////////////////////////////////////////////
-///
-///
 
 class home9 extends StatefulWidget {
   const home9({super.key});

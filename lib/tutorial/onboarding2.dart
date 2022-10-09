@@ -1,3 +1,4 @@
+import 'package:my_work_plz/home/home.dart';
 import 'package:my_work_plz/tutorial/profile.dart';
 import 'package:my_work_plz/theme/color.dart';
 import 'package:my_work_plz/theme/text_style.dart';
@@ -474,7 +475,7 @@ class _page31State extends State<page31> {
                   Navigator.push(
                     context,
                     PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => pageviewt(),
+                        pageBuilder: (_, __, ___) => home(),
                         transitionDuration: Duration(seconds: 0),
                         transitionsBuilder: (_, a, __, c) =>
                             FadeTransition(opacity: a, child: c)),

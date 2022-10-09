@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:my_work_plz/tutorial/onboarding2.dart';
 import 'package:my_work_plz/button/navigateButton.dart';
 
+import '../home/home.dart';
+
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
 
@@ -506,7 +508,7 @@ class _tutorial_doneState extends State<tutorial_done> {
                 padding: const EdgeInsets.only(top: 785, right: 45),
                 child: nextButtonTrans(
                     buttonText: '',
-                    navigator: pageviewt(),
+                    navigator: home(),
                     buttonColor: Colors.transparent,
                     heights: 45,
                     widths: 120,

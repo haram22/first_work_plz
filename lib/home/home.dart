@@ -6,8 +6,8 @@ import '../setting/setting1_8.dart';
 import '../stretch/stretch1.dart';
 import '../theme/color.dart';
 import '../tutorial/profile.dart';
-import '../video/video.dart';
 import '../report/report.dart';
+import 'home03.dart';
 import 'video.dart';
 
 class home extends StatefulWidget {
@@ -170,6 +170,21 @@ class _home1State extends State<home1> {
                       backgroundColor: Colors.transparent,
                       radius: 150,
                       foregroundImage: AssetImage('assets/01.gif')),
+                ),
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => home3()));
+                      },
+                      iconSize: 265,
+                      icon: Image.asset(
+                        'assets/home1_circle.png',
+                        color: Colors.transparent,
+                      )),
                 ),
               ),
             ],

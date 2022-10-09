@@ -4,116 +4,16 @@ import 'package:my_work_plz/button/navigateButton.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:async';
 import 'home.dart';
-import 'lie.dart';
-import 'stand.dart';
+import 'video.dart';
 
-class home_sit extends StatefulWidget {
-  const home_sit({super.key});
-
-  @override
-  State<home_sit> createState() => _home_sitState();
-}
-
-class _home_sitState extends State<home_sit> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Image.asset('assets/sit_1.png'),
-          Padding(
-              padding: const EdgeInsets.only(top: 48.0, left: 15),
-              child: backNavi(navigator: home(), colors: Colors.transparent)),
-          Padding(
-              padding: const EdgeInsets.only(top: 794.0, left: 144),
-              child: nextButtonTrans(
-                  buttonText: "",
-                  navigator: home4_1(),
-                  buttonColor: Colors.transparent,
-                  heights: 50,
-                  widths: 124,
-                  radi: 50,
-                  ispush: true))
-        ],
-      ),
-    );
-  }
-}
-
-class home_lie extends StatefulWidget {
-  const home_lie({super.key});
+class home4_1_lie extends StatefulWidget {
+  const home4_1_lie({super.key});
 
   @override
-  State<home_lie> createState() => _home_lieState();
+  State<home4_1_lie> createState() => _home4_1_lieState();
 }
 
-class _home_lieState extends State<home_lie> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Image.asset('assets/lie.png'),
-          Padding(
-              padding: const EdgeInsets.only(top: 48.0, left: 15),
-              child: backNavi(navigator: home(), colors: Colors.transparent)),
-          Padding(
-              padding: const EdgeInsets.only(top: 794.0, left: 144),
-              child: nextButtonTrans(
-                  buttonText: "",
-                  navigator: home4_1_lie(),
-                  buttonColor: Colors.transparent,
-                  heights: 50,
-                  widths: 124,
-                  radi: 50,
-                  ispush: true))
-        ],
-      ),
-    );
-  }
-}
-
-class home_stand extends StatefulWidget {
-  const home_stand({super.key});
-
-  @override
-  State<home_stand> createState() => _home_standState();
-}
-
-class _home_standState extends State<home_stand> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Image.asset('assets/stand.png'),
-          Padding(
-              padding: const EdgeInsets.only(top: 48.0, left: 15),
-              child: backNavi(navigator: home(), colors: Colors.transparent)),
-          Padding(
-              padding: const EdgeInsets.only(top: 794.0, left: 144),
-              child: nextButtonTrans(
-                  buttonText: "",
-                  navigator: home4_1_stand(),
-                  buttonColor: Colors.transparent,
-                  heights: 50,
-                  widths: 124,
-                  radi: 50,
-                  ispush: true))
-        ],
-      ),
-    );
-  }
-}
-
-class home4_1 extends StatefulWidget {
-  const home4_1({super.key});
-
-  @override
-  State<home4_1> createState() => _home4_1State();
-}
-
-class _home4_1State extends State<home4_1> {
+class _home4_1_lieState extends State<home4_1_lie> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,7 +27,7 @@ class _home4_1State extends State<home4_1> {
               padding: const EdgeInsets.only(top: 757.0, left: 173),
               child: nextButtonTrans(
                   buttonText: "",
-                  navigator: VideoPlayerScreen(),
+                  navigator: VideoPlayerScreen_lie(),
                   buttonColor: Colors.transparent,
                   heights: 68,
                   widths: 68,
@@ -139,14 +39,14 @@ class _home4_1State extends State<home4_1> {
   }
 }
 
-class VideoPlayerScreen extends StatefulWidget {
-  const VideoPlayerScreen({super.key});
+class VideoPlayerScreen_lie extends StatefulWidget {
+  const VideoPlayerScreen_lie({super.key});
 
   @override
-  State<VideoPlayerScreen> createState() => _VideoPlayerScreenState();
+  State<VideoPlayerScreen_lie> createState() => _VideoPlayerScreen_lieState();
 }
 
-class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
+class _VideoPlayerScreen_lieState extends State<VideoPlayerScreen_lie> {
   CountDownController _videocontroller = CountDownController();
   late VideoPlayerController _controller;
   late Future<void> _initializeVideoPlayerFuture;
@@ -199,7 +99,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                           Navigator.push(
                             context,
                             PageRouteBuilder(
-                                pageBuilder: (_, __, ___) => home_sit(),
+                                pageBuilder: (_, __, ___) => home_lie(),
                                 transitionDuration: Duration(seconds: 0),
                                 transitionsBuilder: (_, a, __, c) =>
                                     FadeTransition(opacity: a, child: c)),
@@ -236,7 +136,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                         elevation: 0,
                         primary: Colors.transparent,
                         backgroundColor: Colors.transparent,
-                        side: BorderSide(width: 5.0, color: Colors.green),
+                        side: BorderSide(width: 5.0, color: Colors.transparent),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(0))),
                     onPressed: () {
@@ -250,7 +150,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                       Navigator.push(
                           context,
                           PageRouteBuilder(
-                              pageBuilder: (_, __, ___) => video_done(),
+                              pageBuilder: (_, __, ___) => video_done_lie(),
                               transitionDuration: Duration(seconds: 0),
                               transitionsBuilder: (_, a, __, c) =>
                                   FadeTransition(opacity: a, child: c)));
@@ -263,14 +163,14 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   }
 }
 
-class video_done extends StatefulWidget {
-  const video_done({super.key});
+class video_done_lie extends StatefulWidget {
+  const video_done_lie({super.key});
 
   @override
-  State<video_done> createState() => _video_doneState();
+  State<video_done_lie> createState() => _video_done_lieState();
 }
 
-class _video_doneState extends State<video_done> {
+class _video_done_lieState extends State<video_done_lie> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -280,7 +180,7 @@ class _video_doneState extends State<video_done> {
           Padding(
               padding: const EdgeInsets.only(top: 48.0, left: 15),
               child: backNavi(
-                navigator: home_sit(),
+                navigator: home_lie(),
                 colors: Colors.transparent,
               )),
         ],

@@ -27,7 +27,7 @@ class _setting_firstState extends State<setting_first> {
           leading: Padding(
             padding: const EdgeInsets.only(left: 18.0),
             child: backNavi(
-              navigator: home9(),
+              navigator: homesetting(),
               colors: Main,
             ),
           ),
@@ -46,8 +46,14 @@ class _setting_firstState extends State<setting_first> {
             padding: const EdgeInsets.only(top: 40.0, left: 28),
             child: InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => position_1()));
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: (_, __, ___) => position_1(),
+                      transitionDuration: Duration(seconds: 0),
+                      transitionsBuilder: (_, a, __, c) =>
+                          FadeTransition(opacity: a, child: c)),
+                );
               },
               child: Container(
                 width: 360,
@@ -175,9 +181,7 @@ class _position_1State extends State<position_1> {
       backgroundColor: Colors.white,
       appBar: AppBar(
           leading: Padding(
-            padding: const EdgeInsets.only(left: 30.0),
-            child: backArrow(),
-          ),
+              padding: const EdgeInsets.only(left: 30.0), child: backArrow()),
           backgroundColor: Colors.white,
           elevation: 0,
           title: Text(
@@ -248,13 +252,11 @@ class _position_2State extends State<position_2> {
       backgroundColor: Colors.white,
       appBar: AppBar(
           leading: Padding(
-            padding: const EdgeInsets.only(left: 30.0),
-            child: backArrow(),
-          ),
+              padding: const EdgeInsets.only(left: 30.0), child: backArrow()),
           backgroundColor: Colors.white,
           elevation: 0,
           title: Text(
-            "구부려 앉은 자세",
+            "짝다리 하고 서는 자세",
             style: title3(size: 23, color: Main),
           )),
       body: Column(children: [
