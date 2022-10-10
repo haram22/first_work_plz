@@ -1,9 +1,6 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
-import 'package:my_work_plz/tutorial/time.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:my_work_plz/theme/color.dart';
 import 'package:my_work_plz/button/navigateButton.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:my_work_plz/tutorial/onboarding2.dart';
