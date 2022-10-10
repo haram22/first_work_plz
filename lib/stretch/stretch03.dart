@@ -217,7 +217,7 @@ class _stret03State extends State<stret03> {
                         width: 121,
                         height: 44,
                         child: FloatingActionButton.extended(
-                          backgroundColor: _isPause ? text : Main,
+                          backgroundColor: _isPause ? Main : text,
                           onPressed: () {
                             setState(() {
                               if (value == 0) {

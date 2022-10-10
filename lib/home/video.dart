@@ -236,7 +236,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                         elevation: 0,
                         primary: Colors.transparent,
                         backgroundColor: Colors.transparent,
-                        side: BorderSide(width: 5.0, color: Colors.green),
+                        side: BorderSide(width: 5.0, color: Colors.transparent),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(0))),
                     onPressed: () {

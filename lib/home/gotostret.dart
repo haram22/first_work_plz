@@ -27,7 +27,7 @@ class _homestretState extends State<homestret> {
   static const List<Widget> _widgetOptions = <Widget>[
     home33(),
     report(),
-    stretch1(),
+    stret_back(),
     setting1()
   ];
   @override
@@ -88,263 +88,136 @@ class _homestretState extends State<homestret> {
   }
 }
 
-class home1 extends StatefulWidget {
-  const home1({super.key});
+String result = '';
+bool is1 = true;
+bool is2 = false;
+
+class stret_back extends StatefulWidget {
+  const stret_back({super.key});
 
   @override
-  State<home1> createState() => _home1State();
+  State<stret_back> createState() => _stret_backState();
 }
 
-class _home1State extends State<home1> {
-  bool is1 = false;
-  bool is2 = false;
-  bool is3 = false;
-  bool is4 = false;
+class _stret_backState extends State<stret_back> {
+  late List<bool> isSelected;
+
+  @override
+  void initState() {
+    isSelected = [is1, is2];
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: background,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leadingWidth: 115,
-        leading: Padding(
-            padding: const EdgeInsets.only(left: 37.0),
-            child: SvgPicture.asset('assets/name_logo.svg')),
-        actions: [
-          Padding(
-              padding: const EdgeInsets.only(right: 30.0),
-              child: IconButton(
-                  icon: SvgPicture.asset('assets/notification.svg'),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      PageRouteBuilder(
-                          pageBuilder: (_, __, ___) => noti(),
-                          transitionDuration: Duration(seconds: 0),
-                          transitionsBuilder: (_, a, __, c) =>
-                              FadeTransition(opacity: a, child: c)),
-                    );
-                  }))
-        ],
-      ),
-      backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 8.0, left: 17, right: 17),
-              child: Stack(
-                children: [
-                  Image.asset('assets/d_60.png'),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 18.0, left: 30),
-                    child: Text("${user().input}님, 다음 측정일까지",
-                        style: body1(color: Colors.white, size: 12)),
-                  )
-                ],
-              ),
-            ),
-          ),
-          SizedBox(height: 18),
-          Center(
-            child: Text("${user().input}님! 자세를 위해 열심히 하고 있나요?",
-                style: subtitle1(size: 18, color: text)),
-          ),
-          Stack(
-            children: [
-              Center(
-                child: Padding(
-                  padding: EdgeInsets.only(top: 20.0, bottom: 20),
-                  child: SizedBox(
-                      height: 260,
-                      child: Image.asset('assets/home1_circle.png')),
+          // toolbarHeight: 100,
+          backgroundColor: Colors.white,
+          elevation: 0,
+          title: Text('스트레칭', style: title1(size: 26, color: Main))),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  height: 54,
+                  width: double.infinity,
+                  color: Colors.white,
                 ),
-              ),
-              const Center(
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    top: 20.0,
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Center(
+                    child: ToggleButtons(
+                      color: Colors.transparent,
+                      fillColor: Colors.transparent,
+                      borderColor: Colors.transparent,
+                      splashColor: Colors.transparent,
+                      selectedColor: Colors.transparent,
+                      selectedBorderColor: Colors.transparent,
+                      // ignore: sort_child_properties_last
+                      children: [
+                        Center(
+                          child: Padding(
+                              // ignore: prefer_const_constructors
+                              padding: EdgeInsets.only(right: 30),
+                              child: is1
+                                  ? Image.asset(
+                                      'assets/command.png',
+                                      width: 160,
+                                    )
+                                  : Image.asset(
+                                      'assets/un_command.png',
+                                      width: 160,
+                                    )),
+                        ),
+                        Center(
+                          child: Padding(
+                              // ignore: prefer_const_constructors
+                              padding: EdgeInsets.only(top: 0),
+                              child: is2
+                                  ? Image.asset(
+                                      'assets/searchon.png',
+                                      width: 160,
+                                    )
+                                  : Image.asset(
+                                      'assets/un_search.png',
+                                      width: 160,
+                                    )),
+                        ),
+                      ],
+                      isSelected: isSelected,
+                      onPressed: toggleSelect,
+                    ),
                   ),
-                  child: CircleAvatar(
-                      backgroundColor: Colors.transparent,
-                      radius: 150,
-                      foregroundImage: AssetImage('assets/01.gif')),
                 ),
+              ],
+            ),
+            Container(
+              height: 636.6,
+              child: SingleChildScrollView(
+                child: is1 ? command1() : search(),
               ),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                              pageBuilder: (_, __, ___) => home2(),
-                              transitionDuration: Duration(seconds: 0),
-                              transitionsBuilder: (_, a, __, c) =>
-                                  FadeTransition(opacity: a, child: c)),
-                        );
-                      },
-                      iconSize: 265,
-                      icon: Image.asset('assets/home1_circle.png',
-                          color: Colors.transparent)),
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Padding(
-                  padding: const EdgeInsets.only(left: 36.0),
-                  child: Text("주의가 필요한 자세 TOP3",
-                      style: title2(size: 19, color: text))),
-              SizedBox(width: 77),
-              TextButton(
-                  style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      PageRouteBuilder(
-                          pageBuilder: (_, __, ___) => more(),
-                          transitionDuration: Duration(seconds: 0),
-                          transitionsBuilder: (_, a, __, c) =>
-                              FadeTransition(opacity: a, child: c)),
-                    );
-                  },
-                  child: Image.asset('assets/button_more.png', width: 78)),
-            ],
-          ),
-          Row(
-            children: [
-              SizedBox(width: 16),
-              Column(
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                              pageBuilder: (_, __, ___) => home_sit(),
-                              transitionDuration: Duration(seconds: 0),
-                              transitionsBuilder: (_, a, __, c) =>
-                                  FadeTransition(opacity: a, child: c)),
-                        );
-                      },
-                      icon: Image.asset('assets/top1.png'),
-                      iconSize: 110),
-                  Text("허리 구부려 앉기", style: body4(size: 12, color: text))
-                ],
-              ),
-              SizedBox(width: 1),
-              Column(
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                              pageBuilder: (_, __, ___) => home_lie(),
-                              transitionDuration: Duration(seconds: 0),
-                              transitionsBuilder: (_, a, __, c) =>
-                                  FadeTransition(opacity: a, child: c)),
-                        );
-                      },
-                      icon: Image.asset('assets/top2.png'),
-                      iconSize: 110),
-                  Text("엎드려 자기", style: body4(size: 12, color: text))
-                ],
-              ),
-              SizedBox(width: 1),
-              Column(
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          PageRouteBuilder(
-                              pageBuilder: (_, __, ___) => home_stand(),
-                              transitionDuration: Duration(seconds: 0),
-                              transitionsBuilder: (_, a, __, c) =>
-                                  FadeTransition(opacity: a, child: c)),
-                        );
-                      },
-                      icon: Image.asset('assets/top3.png'),
-                      iconSize: 110),
-                  Text("짝다리 하고 서기", style: body4(size: 12, color: text))
-                ],
-              )
-            ],
-          ),
-          Stack(
-            children: [
-              Padding(
-                  padding: const EdgeInsets.only(
-                      top: 20.0, left: 13, right: 10, bottom: 30),
-                  child: Image.asset('assets/mission.png')),
-              Padding(
-                padding: const EdgeInsets.only(top: 68.0, left: 32),
-                child: IconButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    onPressed: () {
-                      setState(() {
-                        is1 = !is1;
-                      });
-                    },
-                    icon: is1
-                        ? Image.asset('assets/is_true.png', width: 21)
-                        : Image.asset('assets/is_un.png', width: 21)),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 107.0, left: 32),
-                child: IconButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    onPressed: () {
-                      setState(() {
-                        is2 = !is2;
-                      });
-                    },
-                    icon: is2
-                        ? Image.asset('assets/is_true.png', width: 21)
-                        : Image.asset('assets/is_un.png', width: 21)),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 146.0, left: 32),
-                child: IconButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    onPressed: () {
-                      setState(() {
-                        is3 = !is3;
-                      });
-                    },
-                    icon: is3
-                        ? Image.asset('assets/is_true.png', width: 21)
-                        : Image.asset('assets/is_un.png', width: 21)),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 184.0, left: 32),
-                child: IconButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    onPressed: () {
-                      setState(() {
-                        is4 = !is4;
-                      });
-                    },
-                    icon: is4
-                        ? Image.asset('assets/is_true.png', width: 21)
-                        : Image.asset('assets/is_un.png', width: 21)),
-              ),
-            ],
-          ),
-        ],
+            )
+          ],
+        ),
       ),
+    );
+  }
+
+  void toggleSelect(value) {
+    if (value == 0) {
+      is1 = true;
+      is2 = false;
+    } else {
+      is1 = false;
+      is2 = true;
+    }
+    setState(() {
+      isSelected = [is1, is2];
+    });
+  }
+}
+
+class command1 extends StatefulWidget {
+  const command1({super.key});
+
+  @override
+  State<command1> createState() => _command1State();
+}
+
+class _command1State extends State<command1> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SingleChildScrollView(
+          child: Padding(
+        padding: const EdgeInsets.only(top: 30.0, left: 10, right: 10),
+        child: Image.asset('assets/stret100.png'),
+      )),
     );
   }
 }
