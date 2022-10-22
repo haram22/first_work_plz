@@ -10,7 +10,13 @@ bool button3 = false;
 bool button4 = false;
 bool button5 = false;
 bool button6 = false;
-double _value = 20;
+double _value1 = 20;
+double _value2 = 30;
+double _value3 = 20;
+double _value4 = 20;
+double _value5 = 20;
+double _value6 = 20;
+int test = 1;
 
 class report12 extends StatefulWidget {
   const report12({super.key});
@@ -162,6 +168,7 @@ class _report12State extends State<report12> {
                                       onTap: () {
                                         setState(() {
                                           button1 = !button1;
+                                          test = 1;
                                         });
                                       },
                                       child: button1
@@ -178,6 +185,7 @@ class _report12State extends State<report12> {
                                       onTap: () {
                                         setState(() {
                                           button2 = !button2;
+                                          test = 2;
                                         });
                                       },
                                       child: button2
@@ -252,36 +260,12 @@ class _report12State extends State<report12> {
                         ],
                       ),
                     ),
-                    Padding(
-                        padding: const EdgeInsets.only(
-                            top: 450.0, left: 50, right: 50),
-                        child: button1
-                            ? SliderTheme(
-                                data: SliderTheme.of(context).copyWith(
-                                  trackHeight: 10.0,
-                                  minThumbSeparation: 2,
-                                  thumbColor: pain,
-                                  activeTickMarkColor: pain,
-                                  activeTrackColor: pain,
-                                  thumbShape: RoundSliderThumbShape(
-                                      enabledThumbRadius: 12.0),
-                                  overlayColor: Colors.transparent,
-                                  inactiveTickMarkColor: Gray2,
-                                  inactiveTrackColor: Gray2,
-                                ),
-                                child: Slider(
-                                  min: 0.0,
-                                  max: 50.0,
-                                  divisions: 4,
-                                  value: _value,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      _value = value;
-                                    });
-                                  },
-                                ),
-                              )
-                            : button2
+                    Stack(
+                      children: [
+                        Padding(
+                            padding: const EdgeInsets.only(
+                                top: 450.0, left: 50, right: 50),
+                            child: button1
                                 ? SliderTheme(
                                     data: SliderTheme.of(context).copyWith(
                                       trackHeight: 10.0,
@@ -295,19 +279,59 @@ class _report12State extends State<report12> {
                                       inactiveTickMarkColor: Gray2,
                                       inactiveTrackColor: Gray2,
                                     ),
+                                    child: button2
+                                        ? Slider(
+                                            min: 0.0,
+                                            max: 50.0,
+                                            divisions: 4,
+                                            value: _value3,
+                                            onChanged: (value) {
+                                              setState(() {
+                                                _value3 = value;
+                                              });
+                                            },
+                                          )
+                                        : Slider(
+                                            min: 0.0,
+                                            max: 50.0,
+                                            divisions: 4,
+                                            value: _value1,
+                                            onChanged: (value) {
+                                              setState(() {
+                                                _value1 = value;
+                                              });
+                                            },
+                                          ),
+                                  )
+                                : SliderTheme(
+                                    data: SliderTheme.of(context).copyWith(
+                                      trackHeight: 10.0,
+                                      minThumbSeparation: 2,
+                                      thumbColor: Gray2,
+                                      activeTickMarkColor: Gray2,
+                                      activeTrackColor: Gray2,
+                                      thumbShape: RoundSliderThumbShape(
+                                          enabledThumbRadius: 12.0),
+                                      overlayColor: Colors.transparent,
+                                      inactiveTickMarkColor: Gray2,
+                                      inactiveTrackColor: Gray2,
+                                    ),
                                     child: Slider(
                                       min: 0.0,
                                       max: 50.0,
                                       divisions: 4,
-                                      value: _value,
+                                      value: 20,
                                       onChanged: (value) {
                                         setState(() {
-                                          _value = value;
+                                          _value1 = value;
                                         });
                                       },
                                     ),
-                                  )
-                                : button3
+                                  )),
+
+                        /////////////////////222222
+
+                        /*button2
                                     ? SliderTheme(
                                         data: SliderTheme.of(context).copyWith(
                                           trackHeight: 10.0,
@@ -325,18 +349,17 @@ class _report12State extends State<report12> {
                                           min: 0.0,
                                           max: 50.0,
                                           divisions: 4,
-                                          value: _value,
+                                          value: _value2,
                                           onChanged: (value) {
                                             setState(() {
-                                              _value = value;
+                                              _value2 = value;
                                             });
                                           },
                                         ),
                                       )
-                                    : button4
+                                    : button3
                                         ? SliderTheme(
-                                            data: SliderTheme.of(context)
-                                                .copyWith(
+                                            data: SliderTheme.of(context).copyWith(
                                               trackHeight: 10.0,
                                               minThumbSeparation: 2,
                                               thumbColor: pain,
@@ -352,39 +375,69 @@ class _report12State extends State<report12> {
                                               min: 0.0,
                                               max: 50.0,
                                               divisions: 4,
-                                              value: _value,
+                                              value: _value3,
                                               onChanged: (value) {
                                                 setState(() {
-                                                  _value = value;
-                                                });
-                                              },
-                                            ))
-                                        : SliderTheme(
-                                            data: SliderTheme.of(context)
-                                                .copyWith(
-                                              trackHeight: 10.0,
-                                              minThumbSeparation: 2,
-                                              thumbColor: Gray2,
-                                              activeTickMarkColor: Gray2,
-                                              activeTrackColor: Gray2,
-                                              thumbShape: RoundSliderThumbShape(
-                                                  enabledThumbRadius: 12.0),
-                                              overlayColor: Colors.transparent,
-                                              inactiveTickMarkColor: Gray2,
-                                              inactiveTrackColor: Gray2,
-                                            ),
-                                            child: Slider(
-                                              min: 0.0,
-                                              max: 50.0,
-                                              divisions: 4,
-                                              value: _value,
-                                              onChanged: (value) {
-                                                setState(() {
-                                                  _value = value;
+                                                  _value3 = value;
                                                 });
                                               },
                                             ),
-                                          )),
+                                          )
+                                        : button4
+                                            ? SliderTheme(
+                                                data: SliderTheme.of(context)
+                                                    .copyWith(
+                                                  trackHeight: 10.0,
+                                                  minThumbSeparation: 2,
+                                                  thumbColor: pain,
+                                                  activeTickMarkColor: pain,
+                                                  activeTrackColor: pain,
+                                                  thumbShape: RoundSliderThumbShape(
+                                                      enabledThumbRadius: 12.0),
+                                                  overlayColor: Colors.transparent,
+                                                  inactiveTickMarkColor: Gray2,
+                                                  inactiveTrackColor: Gray2,
+                                                ),
+                                                child: Slider(
+                                                  min: 0.0,
+                                                  max: 50.0,
+                                                  divisions: 4,
+                                                  value: _value4,
+                                                  onChanged: (value) {
+                                                    setState(() {
+                                                      _value4 = value;
+                                                    });
+                                                  },
+                                                ))
+                                            : SliderTheme(
+                                                data: SliderTheme.of(context)
+                                                    .copyWith(
+                                                  trackHeight: 10.0,
+                                                  minThumbSeparation: 2,
+                                                  thumbColor: Gray2,
+                                                  activeTickMarkColor: Gray2,
+                                                  activeTrackColor: Gray2,
+                                                  thumbShape: RoundSliderThumbShape(
+                                                      enabledThumbRadius: 12.0),
+                                                  overlayColor: Colors.transparent,
+                                                  inactiveTickMarkColor: Gray2,
+                                                  inactiveTrackColor: Gray2,
+                                                ),
+                                                child: Slider(
+                                                  min: 0.0,
+                                                  max: 50.0,
+                                                  divisions: 4,
+                                                  value: _value5,
+                                                  onChanged: (value) {
+                                                    setState(() {
+                                                      _value5 = value;
+                                                    });
+                                                  },
+                                                ),
+                                              )*/
+                        // ),
+                      ],
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(top: 500.0, left: 75),
                       child: Image.asset(

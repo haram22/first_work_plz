@@ -199,7 +199,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                           Navigator.push(
                             context,
                             PageRouteBuilder(
-                                pageBuilder: (_, __, ___) => home_sit(),
+                                pageBuilder: (_, __, ___) => video_done(),
                                 transitionDuration: Duration(seconds: 0),
                                 transitionsBuilder: (_, a, __, c) =>
                                     FadeTransition(opacity: a, child: c)),

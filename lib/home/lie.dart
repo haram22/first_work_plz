@@ -1,6 +1,7 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:my_work_plz/button/navigateButton.dart';
+import 'package:my_work_plz/setting/setting1_8.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:async';
 import 'home.dart';
@@ -124,6 +125,7 @@ class _VideoPlayerScreen_lieState extends State<VideoPlayerScreen_lie> {
             },
           ),
           //_controller.value.isPlaying
+
           Padding(
               padding: const EdgeInsets.only(top: 100.0, left: 00),
               child: SizedBox(
@@ -131,7 +133,7 @@ class _VideoPlayerScreen_lieState extends State<VideoPlayerScreen_lie> {
                 width: 500, // 121
                 child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                        shadowColor: Colors.transparent,
+                        shadowColor: Colors.red,
                         surfaceTintColor: Colors.transparent,
                         elevation: 0,
                         primary: Colors.transparent,

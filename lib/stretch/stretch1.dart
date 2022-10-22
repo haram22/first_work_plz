@@ -261,6 +261,9 @@ class _searchState extends State<search> {
     super.initState();
   }
 
+  final _formKey = GlobalKey<FormState>();
+
+  String? inputtedValue;
   @override
   Widget build(BuildContext context) {
     return Container(

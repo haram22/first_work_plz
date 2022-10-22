@@ -1,3 +1,4 @@
+import 'package:my_work_plz/home/home.dart';
 import 'package:my_work_plz/theme/color.dart';
 import 'package:flutter/material.dart';
 import 'tutorial/login.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         home: AnimatedSplashScreen(
           duration: 3000,
           splashIconSize: 200,
-          nextScreen: loginPage(),
+          nextScreen: home(),
           backgroundColor: Main,
           splash: 'assets/splash_logo.png',
           splashTransition: SplashTransition.fadeTransition,
