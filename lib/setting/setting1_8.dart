@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:my_work_plz/button/navigateButton.dart';
 import 'package:my_work_plz/theme/text_style.dart';
-import 'package:flutter_switch/flutter_switch.dart';
-import '../home/gotosetting.dart';
-import '../home/home09.dart';
 import '../theme/color.dart';
 import '../tutorial/profile.dart';
-import '../tutorial/time.dart';
 import 'setting10_15.dart';
 import 'setting_timer.dart';
 
@@ -45,7 +39,7 @@ class _setting1State extends State<setting1> {
                 Padding(
                   padding: const EdgeInsets.only(top: 97.0, left: 221),
                   child: Text(
-                    '${user().input}',
+                    ' ${user().input}',
                     style: title3(size: 23, color: Main),
                   ),
                 ),

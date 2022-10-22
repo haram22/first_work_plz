@@ -1,5 +1,4 @@
 import 'package:my_work_plz/home/home.dart';
-import 'package:my_work_plz/setting/setting1_8.dart';
 import 'package:my_work_plz/theme/text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

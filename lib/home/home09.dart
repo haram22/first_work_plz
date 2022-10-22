@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../button/navigateButton.dart';
 import '../setting/setting1_8.dart';
 import '../stretch/stretch1.dart';
 import '../theme/color.dart';
 import '../theme/text_style.dart';
 import '../tutorial/profile.dart';
 import 'buttonPress.dart';
-import 'home.dart';
 import '../report/report.dart';
+import 'home.dart';
 import 'video.dart';
 
 class home9 extends StatefulWidget {
@@ -171,6 +170,21 @@ class _home33State extends State<home33> {
                       backgroundColor: Colors.transparent,
                       radius: 150,
                       foregroundImage: AssetImage('assets/03.gif')),
+                ),
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => home()));
+                      },
+                      iconSize: 265,
+                      icon: Image.asset(
+                        'assets/home1_circle.png',
+                        color: Colors.transparent,
+                      )),
                 ),
               ),
             ],

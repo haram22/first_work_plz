@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
-
 import '../button/navigateButton.dart';
 import '../home/gotosetting.dart';
-import '../home/home09.dart';
 import '../theme/color.dart';
 import '../theme/text_style.dart';
 import '../tutorial/time.dart';

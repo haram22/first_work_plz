@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:my_work_plz/button/navigateButton.dart';
+
+import '../report/report.dart';
 import '../setting/setting1_8.dart';
 import '../stretch/stretch1.dart';
 import '../theme/color.dart';
 import '../theme/text_style.dart';
-import '../report/report.dart';
+import 'gotostret.dart';
 import 'home09.dart';
-import 'stret_un100.dart';
 
-class homestret extends StatefulWidget {
-  const homestret({super.key});
+class homestret_un extends StatefulWidget {
+  const homestret_un({super.key});
   @override
-  State<homestret> createState() => _homestretState();
+  State<homestret_un> createState() => _homestret_unState();
 }
 
-class _homestretState extends State<homestret> {
+class _homestret_unState extends State<homestret_un> {
   int _selectedIndex = 2;
   late List<bool> ispress;
   bool ispress1 = true;
@@ -25,7 +25,7 @@ class _homestretState extends State<homestret> {
   static const List<Widget> _widgetOptions = <Widget>[
     home33(),
     report(),
-    stret_back(),
+    stret_back_un(),
     setting1()
   ];
   @override
@@ -89,16 +89,15 @@ class _homestretState extends State<homestret> {
 String result = '';
 bool is1 = true;
 bool is2 = false;
-bool done = false;
 
-class stret_back extends StatefulWidget {
-  const stret_back({super.key});
+class stret_back_un extends StatefulWidget {
+  const stret_back_un({super.key});
 
   @override
-  State<stret_back> createState() => _stret_backState();
+  State<stret_back_un> createState() => _stret_back_unState();
 }
 
-class _stret_backState extends State<stret_back> {
+class _stret_back_unState extends State<stret_back_un> {
   late List<bool> isSelected;
 
   @override
@@ -178,11 +177,7 @@ class _stret_backState extends State<stret_back> {
             Container(
               height: 636.6,
               child: SingleChildScrollView(
-                child: is1
-                    ? Column(
-                        children: [command1()],
-                      )
-                    : search(),
+                child: is1 ? command() : search(),
               ),
             )
           ],
@@ -202,56 +197,5 @@ class _stret_backState extends State<stret_back> {
     setState(() {
       isSelected = [is1, is2];
     });
-  }
-}
-
-class command1 extends StatefulWidget {
-  const command1({super.key});
-
-  @override
-  State<command1> createState() => _command1State();
-}
-
-class _command1State extends State<command1> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: SingleChildScrollView(
-          child: Padding(
-        padding: const EdgeInsets.only(top: 30.0, left: 10, right: 10),
-        child: Stack(
-          children: [
-            Image.asset('assets/stret100.png'),
-            Padding(
-              padding: const EdgeInsets.only(top: 38.0, left: 10),
-              child: SizedBox(
-                height: 230,
-                width: 371,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        elevation: 0,
-                        onPrimary: Colors.transparent,
-                        primary: Colors.transparent,
-                        side: BorderSide(width: 5.0, color: Colors.transparent),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0))),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => homestret_un(),
-                            transitionDuration: Duration(seconds: 0),
-                            transitionsBuilder: (_, a, __, c) =>
-                                FadeTransition(opacity: a, child: c)),
-                      );
-                      //homestret_un
-                    },
-                    child: Text("")),
-              ),
-            )
-          ],
-        ),
-      )),
-    );
   }
 }

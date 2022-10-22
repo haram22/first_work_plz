@@ -1,4 +1,3 @@
-import 'package:my_work_plz/main.dart';
 import 'package:my_work_plz/tutorial/profile.dart';
 import 'package:my_work_plz/theme/color.dart';
 import 'package:my_work_plz/theme/text_style.dart';
@@ -57,36 +56,37 @@ class page14 extends StatefulWidget {
 class _page14State extends State<page14> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        // Image.asset('assets/14_test.png'),
-        Image.asset('assets/159.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 799, left: 45),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: navi(),
-                    buttonColor: Colors.transparent,
-                    heights: 48,
-                    widths: 126,
-                    radi: 50,
-                    ispush: false)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 799, right: 44),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: page16(),
-                    buttonColor: Colors.transparent,
-                    heights: 48,
-                    widths: 126,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/159.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 799, left: 45),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: navi(),
+                      buttonColor: Colors.transparent,
+                      heights: 48,
+                      widths: 126,
+                      radi: 50,
+                      ispush: false)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 799, right: 44),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: page16(),
+                      buttonColor: Colors.transparent,
+                      heights: 48,
+                      widths: 126,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -316,35 +316,37 @@ class watch1 extends StatefulWidget {
 class _watch1State extends State<watch1> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/watch1.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 800, left: 44),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: navi(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: false)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 800, right: 43),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: watch2(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/watch1.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, left: 44),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: navi(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: false)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, right: 43),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: watch2(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -359,35 +361,37 @@ class watch2 extends StatefulWidget {
 class _watch2State extends State<watch2> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/watch2.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 787, left: 42),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: navi(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: false)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 785, right: 45),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: watch3(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/watch2.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 787, left: 42),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: navi(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: false)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 785, right: 45),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: watch3(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -402,35 +406,37 @@ class watch3 extends StatefulWidget {
 class _watch3State extends State<watch3> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/watch3.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 787, left: 42),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: navi(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: false)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 785, right: 45),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: watch4(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/watch3.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 787, left: 42),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: navi(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: false)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 785, right: 45),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: watch4(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -445,35 +451,37 @@ class watch4 extends StatefulWidget {
 class _watch4State extends State<watch4> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/watch4.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 787, left: 42),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: navi(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: false)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 785, right: 45),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: tutorial_done(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/watch4.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 787, left: 42),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: navi(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: false)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 785, right: 45),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: tutorial_done(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -488,35 +496,37 @@ class tutorial_done extends StatefulWidget {
 class _tutorial_doneState extends State<tutorial_done> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/tutorial_done.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 787, left: 42),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: navi(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: false)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 785, right: 45),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: home(),
-                    buttonColor: Colors.transparent,
-                    heights: 45,
-                    widths: 120,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/tutorial_done.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 787, left: 42),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: navi(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: false)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 785, right: 45),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: home(),
+                      buttonColor: Colors.transparent,
+                      heights: 45,
+                      widths: 120,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

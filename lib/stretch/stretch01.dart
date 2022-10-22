@@ -64,7 +64,19 @@ class _stret01State extends State<stret01> {
                                       SizedBox(width: 13),
                                       ElevatedButton(
                                         onPressed: () {
-                                          Navigator.pop(context);
+                                          Navigator.push(
+                                            context,
+                                            PageRouteBuilder(
+                                              pageBuilder: (_, __, ___) =>
+                                                  stretch1_6(),
+                                              transitionDuration:
+                                                  Duration(seconds: 0),
+                                              transitionsBuilder:
+                                                  (_, a, __, c) =>
+                                                      FadeTransition(
+                                                          opacity: a, child: c),
+                                            ),
+                                          );
                                         },
                                         style: ButtonStyle(
                                             backgroundColor:

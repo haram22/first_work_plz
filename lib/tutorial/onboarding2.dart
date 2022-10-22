@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_work_plz/button/navigateButton.dart';
 import 'package:my_work_plz/tutorial/pageView.dart';
-import '../main.dart';
 
 class iphone extends StatefulWidget {
   const iphone({super.key});
@@ -18,33 +17,35 @@ class iphone extends StatefulWidget {
 class _iphoneState extends State<iphone> {
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      Image.asset('assets/iphone_screen.png'),
-      Padding(
-        padding: const EdgeInsets.only(left: 32, right: 32.0, top: 270),
-        child: Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          color: Color(0xff595959),
-          child: ListTile(
-            onTap: () {
-              Navigator.push(
-                context,
-                PageRouteBuilder(
-                    pageBuilder: (_, __, ___) => page13(),
-                    transitionDuration: Duration(seconds: 0),
-                    transitionsBuilder: (_, a, __, c) =>
-                        FadeTransition(opacity: a, child: c)),
-              );
-            },
-            leading: Image.asset('assets/card_logo.png', height: 38.55),
-            title: Text("${user().input}님의 자세분석이 끝났습니다. 결과를 확인하세요!",
-                style: subtitle3(color: white, size: 12)),
+    return Scaffold(
+      body: Stack(children: [
+        Image.asset('assets/iphone_screen.png'),
+        Padding(
+          padding: const EdgeInsets.only(left: 32, right: 32.0, top: 270),
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+            color: Color(0xff595959),
+            child: ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: (_, __, ___) => page13(),
+                      transitionDuration: Duration(seconds: 0),
+                      transitionsBuilder: (_, a, __, c) =>
+                          FadeTransition(opacity: a, child: c)),
+                );
+              },
+              leading: Image.asset('assets/card_logo.png', height: 38.55),
+              title: Text("${user().input}님의 자세분석이 끝났습니다. 결과를 확인하세요!",
+                  style: subtitle3(color: white, size: 12)),
+            ),
           ),
         ),
-      ),
-    ]);
+      ]),
+    );
   }
 }
 
@@ -58,36 +59,22 @@ class page13 extends StatefulWidget {
 class _page13State extends State<page13> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/157.png'),
-        Padding(
-            padding: const EdgeInsets.only(top: 799, left: 146),
-            child: nextButtonTrans(
-                buttonText: '',
-                navigator: page14(),
-                buttonColor: Colors.transparent,
-                heights: 45,
-                widths: 123,
-                radi: 50,
-                ispush: true)),
-      ],
-    );
-  }
-}
-
-class slideto21 extends StatefulWidget {
-  const slideto21({super.key});
-
-  @override
-  State<slideto21> createState() => _slideto21State();
-}
-
-class _slideto21State extends State<slideto21> {
-  @override
-  Widget build(BuildContext context) {
-    return PageView(
-      children: [IntroScreen(), page21()],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/157.png'),
+          Padding(
+              padding: const EdgeInsets.only(top: 799, left: 146),
+              child: nextButtonTrans(
+                  buttonText: '',
+                  navigator: page14(),
+                  buttonColor: Colors.transparent,
+                  heights: 45,
+                  widths: 123,
+                  radi: 50,
+                  ispush: true)),
+        ],
+      ),
     );
   }
 }

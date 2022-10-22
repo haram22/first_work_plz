@@ -4,7 +4,6 @@ import '../button/navigateButton.dart';
 import '../home/gotostret.dart';
 import '../theme/color.dart';
 import '../theme/text_style.dart';
-import 'stretch13.dart';
 
 class stretch11 extends StatefulWidget {
   const stretch11({super.key});
@@ -16,31 +15,33 @@ class stretch11 extends StatefulWidget {
 class _stretch11State extends State<stretch11> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/stretching11.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 800, left: 49),
-                child: nextButton(
-                  buttonText: '다시하기',
-                  navigator: navi(),
-                  buttonColor: Gray1,
-                  ispush: false,
-                )),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 800, right: 49),
-                child: nextButton(
-                  buttonText: '완료',
-                  navigator: stretching12(),
-                  buttonColor: Main,
-                  ispush: true,
-                )),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/stretching11.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, left: 49),
+                  child: nextButton(
+                    buttonText: '다시하기',
+                    navigator: navi(),
+                    buttonColor: Gray1,
+                    ispush: false,
+                  )),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, right: 49),
+                  child: nextButton(
+                    buttonText: '완료',
+                    navigator: stretching12(),
+                    buttonColor: Main,
+                    ispush: true,
+                  )),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

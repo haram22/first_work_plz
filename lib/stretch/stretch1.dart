@@ -3,6 +3,7 @@ import 'package:my_work_plz/button/navigateButton.dart';
 import 'package:my_work_plz/theme/text_style.dart';
 import 'package:flutter/material.dart';
 import '../home/gotostret.dart';
+import '../home/stret_un100.dart';
 import '../theme/color.dart';
 import 'stretch01.dart';
 import 'stretch02.dart';
@@ -420,7 +421,7 @@ class _stretch1_6State extends State<stretch1_6> {
                   Navigator.push(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (_, __, ___) => homestret(),
+                      pageBuilder: (_, __, ___) => homestret_un(),
                       transitionDuration: Duration(seconds: 0),
                       transitionsBuilder: (_, a, __, c) =>
                           FadeTransition(opacity: a, child: c),

@@ -15,35 +15,37 @@ class checkProduct extends StatefulWidget {
 class _checkProductState extends State<checkProduct> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/card_check.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 800, left: 43),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: navi(),
-                    buttonColor: Colors.transparent,
-                    heights: 46,
-                    widths: 125,
-                    radi: 50,
-                    ispush: false)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 800, right: 43),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: second(),
-                    buttonColor: Colors.transparent,
-                    heights: 46,
-                    widths: 125,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/card_check.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, left: 43),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: navi(),
+                      buttonColor: Colors.transparent,
+                      heights: 46,
+                      widths: 125,
+                      radi: 50,
+                      ispush: false)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, right: 43),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: second(),
+                      buttonColor: Colors.transparent,
+                      heights: 46,
+                      widths: 125,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -218,44 +220,46 @@ class second extends StatefulWidget {
 class _secondState extends State<second> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/onboarding2.png'),
-        Center(
-          child: Padding(
-              padding: const EdgeInsets.only(bottom: 0.0, top: 60),
-              child: Center(
-                  child: SizedBox(
-                      height: 406,
-                      child: Image.asset('assets/tutorial1.gif')))),
-        ),
-        Row(
-          // ignore: prefer_const_literals_to_create_immutables
-          children: [
-            const Padding(
-                padding: EdgeInsets.only(top: 800, left: 43),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: navi(),
-                    buttonColor: Colors.transparent,
-                    heights: 43,
-                    widths: 123,
-                    radi: 50,
-                    ispush: false)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 800, right: 43),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: sec_3_t(),
-                    buttonColor: Colors.transparent,
-                    heights: 43,
-                    widths: 123,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/onboarding2.png'),
+          Center(
+            child: Padding(
+                padding: const EdgeInsets.only(bottom: 0.0, top: 60),
+                child: Center(
+                    child: SizedBox(
+                        height: 406,
+                        child: Image.asset('assets/tutorial1.gif')))),
+          ),
+          Row(
+            // ignore: prefer_const_literals_to_create_immutables
+            children: [
+              const Padding(
+                  padding: EdgeInsets.only(top: 800, left: 43),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: navi(),
+                      buttonColor: Colors.transparent,
+                      heights: 43,
+                      widths: 123,
+                      radi: 50,
+                      ispush: false)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, right: 43),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: sec_3_t(),
+                      buttonColor: Colors.transparent,
+                      heights: 43,
+                      widths: 123,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -341,35 +345,37 @@ class page7_2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset('assets/7_2.png'),
-        Row(
-          children: [
-            Padding(
-                padding: const EdgeInsets.only(top: 800, left: 43),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: second(),
-                    buttonColor: Colors.transparent,
-                    heights: 43,
-                    widths: 123,
-                    radi: 50,
-                    ispush: true)),
-            Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(top: 800, right: 44),
-                child: nextButtonTrans(
-                    buttonText: '',
-                    navigator: complete(),
-                    buttonColor: Colors.transparent,
-                    heights: 43,
-                    widths: 123,
-                    radi: 50,
-                    ispush: true)),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Stack(
+        children: [
+          Image.asset('assets/7_2.png'),
+          Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, left: 43),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: second(),
+                      buttonColor: Colors.transparent,
+                      heights: 43,
+                      widths: 123,
+                      radi: 50,
+                      ispush: true)),
+              Spacer(),
+              Padding(
+                  padding: const EdgeInsets.only(top: 800, right: 44),
+                  child: nextButtonTrans(
+                      buttonText: '',
+                      navigator: complete(),
+                      buttonColor: Colors.transparent,
+                      heights: 43,
+                      widths: 123,
+                      radi: 50,
+                      ispush: true)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
