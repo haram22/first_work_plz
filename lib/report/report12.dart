@@ -279,11 +279,62 @@ class _report12State extends State<report12> {
                                       inactiveTickMarkColor: Gray2,
                                       inactiveTrackColor: Gray2,
                                     ),
-                                    child: button1
-                                        ? button2
-                                            ? button3
-                                                // button1,2,3 == true
-                                                ? Slider(
+                                    child: button2
+                                        ? button3
+                                            // button1,2,3 == true
+                                            ? button4
+                                                // 4= true
+                                                ? button5
+                                                    //5=true
+                                                    ? button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value5,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value5 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                    //1,2,3,4=true, 5=false
+                                                    : button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value4,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value4 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                //1,2,3= true, 4=false
+                                                : Slider(
                                                     min: 0.0,
                                                     max: 50.0,
                                                     divisions: 4,
@@ -294,80 +345,279 @@ class _report12State extends State<report12> {
                                                       });
                                                     },
                                                   )
-                                                // 1,2 false, 3=true
-                                                : Slider(
-                                                    min: 0.0,
-                                                    max: 50.0,
-                                                    divisions: 4,
-                                                    value: _value2,
-                                                    onChanged: (value) {
-                                                      setState(() {
-                                                        _value2 = value;
-                                                      });
-                                                    },
-                                                  )
-                                            //1=true, 2=fale
-                                            : button3
-                                                //3= true
-                                                ? Slider(
-                                                    min: 0.0,
-                                                    max: 50.0,
-                                                    divisions: 4,
-                                                    value: _value1,
-                                                    onChanged: (value) {
-                                                      setState(() {
-                                                        _value3 = value;
-                                                      });
-                                                    },
-                                                  )
-                                                //3=false
-                                                : Slider(
-                                                    min: 0.0,
-                                                    max: 50.0,
-                                                    divisions: 4,
-                                                    value: _value1,
-                                                    onChanged: (value) {
-                                                      setState(() {
-                                                        _value1 = value;
-                                                      });
-                                                    },
-                                                  )
-                                        // 1=false
-                                        : button2
-                                            ? button3
-                                                ? Slider(
-                                                    min: 0.0,
-                                                    max: 50.0,
-                                                    divisions: 4,
-                                                    value: 20,
-                                                    onChanged: (value) {
-                                                      setState(() {
-                                                        _value1 = value;
-                                                      });
-                                                    },
-                                                  )
-                                                : Slider(
-                                                    min: 0.0,
-                                                    max: 50.0,
-                                                    divisions: 4,
-                                                    value: 20,
-                                                    onChanged: (value) {
-                                                      setState(() {
-                                                        _value1 = value;
-                                                      });
-                                                    },
-                                                  )
-                                            : Slider(
-                                                min: 0.0,
-                                                max: 50.0,
-                                                divisions: 4,
-                                                value: 20,
-                                                onChanged: (value) {
-                                                  setState(() {
-                                                    _value3 = value;
-                                                  });
-                                                },
-                                              ))
+                                            // 1,2 true, 3=false
+                                            : button4
+                                                ? button5
+                                                    ? Slider(
+                                                        min: 0.0,
+                                                        max: 50.0,
+                                                        divisions: 4,
+                                                        value: _value4,
+                                                        onChanged: (value) {
+                                                          setState(() {
+                                                            _value4 = value;
+                                                          });
+                                                        },
+                                                      )
+                                                    : Slider(
+                                                        min: 0.0,
+                                                        max: 50.0,
+                                                        divisions: 4,
+                                                        value: _value3,
+                                                        onChanged: (value) {
+                                                          setState(() {
+                                                            _value3 = value;
+                                                          });
+                                                        },
+                                                      )
+                                                //4 false
+                                                : button5
+                                                    ? button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value5,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value5 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                    : button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value2,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value2 = value;
+                                                              });
+                                                            },
+                                                          )
+                                        //1=true, 2=fale
+                                        : button3
+                                            //3= true
+                                            ? button4
+                                                ? button5
+                                                    ? button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value5,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value5 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                    : button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value4,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value4 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                //4 false
+                                                : button5
+                                                    ? button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value5,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value5 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                    //5 false
+                                                    : button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value3,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value3 = value;
+                                                              });
+                                                            },
+                                                          )
+                                            //2,3=false
+                                            : button4
+                                                ? button5
+                                                    ? button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value5,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value5 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                    //button5 false
+                                                    : button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value4,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value4 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                //2,3,4 false
+                                                : button5
+                                                    ? button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value5,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value5 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                    : button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value1,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value1 = value;
+                                                              });
+                                                            },
+                                                          )
+                                    // 1=false
+                                    )
                                 : SliderTheme(
                                     data: SliderTheme.of(context).copyWith(
                                       trackHeight: 10.0,
@@ -393,114 +643,6 @@ class _report12State extends State<report12> {
                                       },
                                     ),
                                   )),
-
-                        /////////////////////222222
-
-                        /*button2
-                                    ? SliderTheme(
-                                        data: SliderTheme.of(context).copyWith(
-                                          trackHeight: 10.0,
-                                          minThumbSeparation: 2,
-                                          thumbColor: pain,
-                                          activeTickMarkColor: pain,
-                                          activeTrackColor: pain,
-                                          thumbShape: RoundSliderThumbShape(
-                                              enabledThumbRadius: 12.0),
-                                          overlayColor: Colors.transparent,
-                                          inactiveTickMarkColor: Gray2,
-                                          inactiveTrackColor: Gray2,
-                                        ),
-                                        child: Slider(
-                                          min: 0.0,
-                                          max: 50.0,
-                                          divisions: 4,
-                                          value: _value2,
-                                          onChanged: (value) {
-                                            setState(() {
-                                              _value2 = value;
-                                            });
-                                          },
-                                        ),
-                                      )
-                                    : button3
-                                        ? SliderTheme(
-                                            data: SliderTheme.of(context).copyWith(
-                                              trackHeight: 10.0,
-                                              minThumbSeparation: 2,
-                                              thumbColor: pain,
-                                              activeTickMarkColor: pain,
-                                              activeTrackColor: pain,
-                                              thumbShape: RoundSliderThumbShape(
-                                                  enabledThumbRadius: 12.0),
-                                              overlayColor: Colors.transparent,
-                                              inactiveTickMarkColor: Gray2,
-                                              inactiveTrackColor: Gray2,
-                                            ),
-                                            child: Slider(
-                                              min: 0.0,
-                                              max: 50.0,
-                                              divisions: 4,
-                                              value: _value3,
-                                              onChanged: (value) {
-                                                setState(() {
-                                                  _value3 = value;
-                                                });
-                                              },
-                                            ),
-                                          )
-                                        : button4
-                                            ? SliderTheme(
-                                                data: SliderTheme.of(context)
-                                                    .copyWith(
-                                                  trackHeight: 10.0,
-                                                  minThumbSeparation: 2,
-                                                  thumbColor: pain,
-                                                  activeTickMarkColor: pain,
-                                                  activeTrackColor: pain,
-                                                  thumbShape: RoundSliderThumbShape(
-                                                      enabledThumbRadius: 12.0),
-                                                  overlayColor: Colors.transparent,
-                                                  inactiveTickMarkColor: Gray2,
-                                                  inactiveTrackColor: Gray2,
-                                                ),
-                                                child: Slider(
-                                                  min: 0.0,
-                                                  max: 50.0,
-                                                  divisions: 4,
-                                                  value: _value4,
-                                                  onChanged: (value) {
-                                                    setState(() {
-                                                      _value4 = value;
-                                                    });
-                                                  },
-                                                ))
-                                            : SliderTheme(
-                                                data: SliderTheme.of(context)
-                                                    .copyWith(
-                                                  trackHeight: 10.0,
-                                                  minThumbSeparation: 2,
-                                                  thumbColor: Gray2,
-                                                  activeTickMarkColor: Gray2,
-                                                  activeTrackColor: Gray2,
-                                                  thumbShape: RoundSliderThumbShape(
-                                                      enabledThumbRadius: 12.0),
-                                                  overlayColor: Colors.transparent,
-                                                  inactiveTickMarkColor: Gray2,
-                                                  inactiveTrackColor: Gray2,
-                                                ),
-                                                child: Slider(
-                                                  min: 0.0,
-                                                  max: 50.0,
-                                                  divisions: 4,
-                                                  value: _value5,
-                                                  onChanged: (value) {
-                                                    setState(() {
-                                                      _value5 = value;
-                                                    });
-                                                  },
-                                                ),
-                                              )*/
-                        // ),
                       ],
                     ),
                     Padding(

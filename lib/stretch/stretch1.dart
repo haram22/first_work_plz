@@ -252,9 +252,21 @@ class search extends StatefulWidget {
 
 class _searchState extends State<search> {
   late List<bool> isSelected = [true, false];
-
+  late TextEditingController _controller;
   @override
   void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  void initsState() {
     isSelected = [is1, is2];
     is1 = true;
     is2 = false;
@@ -277,6 +289,7 @@ class _searchState extends State<search> {
                 SizedBox(
                   height: 47,
                   child: TextField(
+                    controller: _controller,
                     // textAlign: TextAlign.center,
                     cursorColor: Main,
                     style: body6(size: 15, color: Main),
