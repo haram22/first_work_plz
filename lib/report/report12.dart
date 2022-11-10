@@ -359,17 +359,29 @@ class _report12State extends State<report12> {
                                                           });
                                                         },
                                                       )
-                                                    : Slider(
-                                                        min: 0.0,
-                                                        max: 50.0,
-                                                        divisions: 4,
-                                                        value: _value3,
-                                                        onChanged: (value) {
-                                                          setState(() {
-                                                            _value3 = value;
-                                                          });
-                                                        },
-                                                      )
+                                                    : button6
+                                                        ? Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value6,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value6 = value;
+                                                              });
+                                                            },
+                                                          )
+                                                        : Slider(
+                                                            min: 0.0,
+                                                            max: 50.0,
+                                                            divisions: 4,
+                                                            value: _value3,
+                                                            onChanged: (value) {
+                                                              setState(() {
+                                                                _value3 = value;
+                                                              });
+                                                            },
+                                                          )
                                                 //4 false
                                                 : button5
                                                     ? button6

@@ -5,6 +5,8 @@ import 'tutorial/login.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
+import 'tutorial/profile.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
         home: AnimatedSplashScreen(
           duration: 3000,
           splashIconSize: 200,
-          nextScreen: loginPage(),
+          nextScreen: profile(),
           backgroundColor: Main,
           splash: 'assets/splash_logo.png',
           splashTransition: SplashTransition.fadeTransition,

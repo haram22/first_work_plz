@@ -257,20 +257,15 @@ class _searchState extends State<search> {
   void initState() {
     super.initState();
     _controller = TextEditingController();
+    isSelected = [is1, is2];
+    is1 = true;
+    is2 = false;
   }
 
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
-  }
-
-  @override
-  void initsState() {
-    isSelected = [is1, is2];
-    is1 = true;
-    is2 = false;
-    super.initState();
   }
 
   final _formKey = GlobalKey<FormState>();
@@ -283,40 +278,46 @@ class _searchState extends State<search> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 34.0, left: 30, right: 30),
-            child: Stack(
-              children: [
-                SizedBox(
-                  height: 47,
-                  child: TextField(
-                    controller: _controller,
-                    // textAlign: TextAlign.center,
-                    cursorColor: Main,
-                    style: body6(size: 15, color: Main),
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.only(top: 3, left: 18),
-                      filled: true,
-                      fillColor: Colors.white,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(width: 1, color: Main),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide(width: 1, color: Main),
-                      ),
-                      hintText: '키워드 검색',
-                      hintStyle: body6(size: 15, color: Gray2),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10.0, left: 310),
-                  child: SvgPicture.asset('assets/iconsearch.svg'),
-                ),
-              ],
-            ),
+            padding: const EdgeInsets.only(top: 28.0),
+            child: Image.asset('assets/field.png', height: 55),
           ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 34.0, left: 30, right: 30),
+          //   child:
+          //   Stack(
+          //     children: [
+          //       SizedBox(
+          //         height: 70,
+          //         child: Image.asset('assets/field.png'),
+          //         // TextField(
+          //         //   controller: _controller,
+          //         //   // textAlign: TextAlign.center,
+          //         //   cursorColor: Main,
+          //         //   style: body6(size: 15, color: Main),
+          //         //   decoration: InputDecoration(
+          //         //     contentPadding: EdgeInsets.only(top: 3, left: 18),
+          //         //     filled: true,
+          //         //     fillColor: Colors.white,
+          //         //     enabledBorder: OutlineInputBorder(
+          //         //       borderRadius: BorderRadius.circular(30),
+          //         //       borderSide: BorderSide(width: 1, color: Main),
+          //         //     ),
+          //         //     focusedBorder: OutlineInputBorder(
+          //         //       borderRadius: BorderRadius.circular(30),
+          //         //       borderSide: BorderSide(width: 1, color: Main),
+          //         //     ),
+          //         //     hintText: '키워드 검색',
+          //         //     hintStyle: body6(size: 15, color: Gray2),
+          //         //   ),
+          //         // ),
+          //       ),
+          //       // Padding(
+          //       //   padding: const EdgeInsets.only(top: 10.0, left: 310),
+          //       //   child: SvgPicture.asset('assets/iconsearch.svg'),
+          //       // ),
+          //     ],
+          //   ),
+          // ),
           Stack(
             children: [
               Padding(
